@@ -5,15 +5,15 @@ function App() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [errors, setErrors] = useState('');
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    phone: "",
-    corporationNumber: "",
+    firstName: '',
+    lastName: '',
+    phone: '',
+    corporationNumber: '',
   });
   
   function _onFormInputChange(event: ChangeEvent<HTMLInputElement>) {
-    let { name, value } = event.target;
-    if (name === 'phone') {
+    let { value } = event.target;
+    if (event.target.name === 'phone') {
       if (!value.startsWith('+1')) {
         value = '+1' + value.replace(/[^0-9]/g, ''); // Remove non-numeric characters
       } else {
@@ -23,12 +23,13 @@ function App() {
 
     setFormData({
       ...formData,
-      [name]: value,
+      [event.target.name]: value,
     })
   }
 
   async function _onFormSubmit(e: FormEvent) {
     e.preventDefault();
+    setErrors('');
     setIsSubmitting(true);
 
     const validationRes = await fetch(`https://fe-hometask-api.dev.vault.tryvault.com/corporation-number/${formData.corporationNumber}`)
@@ -51,10 +52,10 @@ function App() {
     setIsSubmitting(false);
     if (formSubmitRes.status === 200){
       setFormData({
-        firstName: "",
-        lastName: "",
-        phone: "",
-        corporationNumber: "",
+        firstName: '',
+        lastName: '',
+        phone: '',
+        corporationNumber: '',
       })
       setErrors('');  
     } else {

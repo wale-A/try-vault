@@ -6,7 +6,7 @@
     //   };
     
     export default {
-          setupFilesAfterEnv: ["<rootDir>/jest.setup.ts"], // Path to your setup file
+          setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'], // Path to your setup file
       preset: 'ts-jest',
   testEnvironment: 'jest-environment-jsdom',
   transform: {
@@ -15,6 +15,6 @@
   },
   moduleNameMapper: {
     // '\\.(gif|ttf|eot|svg|png)$': '<rootDir>/src/__ mocks __/fileMock.ts',
-    "\\.(css|less|sass|scss)$": '<rootDir>/src/__mocks__/styleMock.ts'
+    '\\.(css|less|sass|scss)$': '<rootDir>/src/__mocks__/styleMock.ts'
   },
 };
