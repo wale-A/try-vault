@@ -1,0 +1,33 @@
+.onboarding-section {
+  padding: var(--spacing-medium);
+  border-radius: var(--border-radius);
+  border: 1px solid var(--color-light);
+  background-color: var(--color-light);
+}
+
+.form-title {
+  margin: var(--spacing-extra-small) 0;
+}
+
+.form-row {
+  display: flex;
+  gap: var(--spacing-medium);
+  justify-content: space-between;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: var(--spacing-small);
+  width: 100%;
+}
+
+.submit-button .arrow {
+  margin-left: var(--spacing-extra-small)
+}
+
+.error-message {
+  margin-top: var(--spacing-extra-small);
+  color: red;
+}

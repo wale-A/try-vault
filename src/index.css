@@ -1,0 +1,47 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  --border-radius: 8px;
+  --color-dark: #1a1a1a;
+  --color-light: white;
+  --border-color: lightgrey;  
+  --spacing-extra-small: .5em;
+  --spacing-small: 1em;
+  --spacing-medium: 1.5em;
+  --spacing-large: 2.5em;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: lightgrey;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+button {
+  border-radius: var(--border-radius);
+  background-color: #1a1a1a;
+  color: white;
+  margin-top: var(--spacing-medium);
+  width: 100%;
+  padding: var(--spacing-small) 0;
+}
+
+input {
+  height: 2.5em;
+  border-radius: var(--border-radius);
+  border: 1px solid var(--border-color);
+  width: 100%;
+  min-width: 14vw;
+  padding: 0 var(--spacing-extra-small);
+}
